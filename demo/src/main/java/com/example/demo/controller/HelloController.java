@@ -1,5 +1,6 @@
-package controller;
+package com.example.demo.controller;
 
+import com.example.demo.entity.Hello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,10 +29,10 @@ public class HelloController {
         return m;
     }
 
-//    @GetMapping("/hello-object")
-//    @ResponseBody
-//    public Hello helloObject(String name) {
-//        Hello h = new Hello(name);
-//        return h;
-//    }
+    @GetMapping("/hello-object")
+    @ResponseBody
+    public Hello helloObject(String name) {
+        Hello h = new Hello(name);
+        return h;
+    }
 }
